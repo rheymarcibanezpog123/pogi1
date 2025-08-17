@@ -3,20 +3,16 @@ const person = {
   age: 23,
   isStudent: true,
   address: {
-    street: '123 Main St',
-    city: 'Techville',
-    zipCode: '10001',
-    coordinates: {
-      lat: 40.7128,
-      lng: -74.0060
-    }
+    country: 'Philippines',
+    region: 'Mindanao',
+    city: 'Davao City'
   },
   hobbies: ['coding', 'reading', 'gaming'],
   education: {
-    degree: 'Computer Science',
+    degree: 'Information Technology',
     school: {
-      name: 'Tech University',
-      yearGraduated: 2025
+      name: 'Holy Cross of Davao College',
+      yearGraduated: 2027
     }
   }
 };
@@ -25,12 +21,14 @@ console.log('Full Object:', person);
 console.log('\n--- Accessing Nested Properties ---');
 console.log('Name:', person.name);
 console.log('City:', person.address.city);
-console.log('Latitude:', person.address.coordinates.lat);
+console.log('Region:', person.address.region);
 console.log('First Hobby:', person.hobbies[0]);
+console.log('Degree:', person.education.degree);
 console.log('School Name:', person.education.school.name);
+console.log('Graduation Year:', person.education.school.yearGraduated);
 
-person.address.zipCode = '10002';
-console.log('\nModified Zip Code:', person.address.zipCode);
+person.address.city = 'Davao';
+console.log('\nModified City:', person.address.city);
 
 person.employment = {
   company: 'DevCorp',
